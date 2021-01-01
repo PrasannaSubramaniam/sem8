@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
+  color: rgb(0, 0, 0);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.col-heading {
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.days {
+}
+
+.row-heading {
+}
+
+.tt-row {
+  display: flex;
+}
+
+.cell {
+  width: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cell div {
+  position: absolute;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.se-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.se-heading {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.se-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.se-submit-btn span {
+  /* font-size: 25px; */
+  text-transform: uppercase;
+  background-color: #09ad7e;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: "\2713\0020";
+  position: absolute;
+  top: 0.15em;
+  left: 0.22em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all 0.2s;
+  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #4778d9 !important;
+}
+
+/* Useless styles, just for demo design */
+
+/* h1,
+h2 {
+  margin-bottom: 0.25em;
+  font-weight: normal;
+  text-align: center;
+}
+h2 {
+  margin: 0.25em 0 2em;
+  color: #aaa;
+}
+form {
+  width: 7em;
+  margin: 0 auto;
+}
+.txtcenter {
+  margin-top: 4em;
+  font-size: 0.9em;
+  text-align: center;
+  color: #aaa;
+}
+.copy {
+  margin-top: 2em;
+}
+.copy a {
+  text-decoration: none;
+  color: #4778d9;
+} */
