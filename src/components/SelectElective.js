@@ -47,7 +47,10 @@ const SelectElective = ({ electiveList, handleSubmit }) => {
                 handleClick(i);
               }}
             />
-            <label for={`check${i}`}>{`${el.name} ( ${el.code} )`}</label>
+            <label
+              className="se-label"
+              for={`check${i}`}
+            >{`${el.name} (${el.code})`}</label>
           </p>
         ))}
       </div>
