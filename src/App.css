@@ -29,7 +29,21 @@ body,
 .tt-progress {
   position: absolute;
   height: 30px;
-  background-color: #7378edc2;
+  background: #a64bf4;
+  background: -webkit-linear-gradient(-45deg, #00dbde, #fc00ff);
+  background: -o-linear-gradient(-45deg, #00dbde, #fc00ff);
+  background: -moz-linear-gradient(-45deg, #00dbde, #fc00ff);
+  background: linear-gradient(-45deg, #00dbde, #fc00ff);
+}
+
+.tt-progress::after {
+  content: "";
+  position: absolute;
+  border-top: 10px solid #f507fe;
+  border-left: 10px solid #ffffff00;
+  border-right: 10px solid #ffffff00;
+  right: -9px;
+  top: -10px;
 }
 
 .hrbox {
@@ -69,6 +83,14 @@ body,
   width: calc(15 / 360 * 100%);
 }
 
+/* .tt-progress-bar {
+  position: relative;
+}
+
+.tt-progress-bar::after {
+  content: "NOW";
+} */
+
 .tt-progress-content {
   display: flex;
 }
@@ -88,32 +110,6 @@ body,
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.col-heading {
-}
-
-.days {
-}
-
-.row-heading {
-}
-
-.tt-row {
-  display: flex;
-}
-
-.cell {
-  width: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.cell div {
-  position: absolute;
-  font-weight: bold;
 }
 
 .se-wrapper {
@@ -283,36 +279,6 @@ td a:hover,
 label:hover:before {
   border: 2px solid #4778d9 !important;
 }
-
-/* Useless styles, just for demo design */
-
-/* h1,
-h2 {
-  margin-bottom: 0.25em;
-  font-weight: normal;
-  text-align: center;
-}
-h2 {
-  margin: 0.25em 0 2em;
-  color: #aaa;
-}
-form {
-  width: 7em;
-  margin: 0 auto;
-}
-.txtcenter {
-  margin-top: 4em;
-  font-size: 0.9em;
-  text-align: center;
-  color: #aaa;
-}
-.copy {
-  margin-top: 2em;
-}
-.copy a {
-  text-decoration: none;
-  color: #4778d9;
-} */
 
 @media only screen and (max-width: 1000px) {
   .break-hide {

@@ -23,6 +23,7 @@ const TimeTable = ({ sem8, omitElective }) => {
     };
   }, []);
   const updateWidth = () => {
+    // let width = (9 - 9) * 60 + 30;
     let width = (HOUR - 9) * 60 + MIN;
     if (width < 360) {
       setprogressWidth((width / 360) * 100);
@@ -56,7 +57,11 @@ const TimeTable = ({ sem8, omitElective }) => {
     if (sub === "FREE") {
       return sub;
     } else {
-      return <a className="a-hover" href={link}>{sub}</a>;
+      return (
+        <a className="a-hover" href={link}>
+          {sub}
+        </a>
+      );
     }
   };
   const generatePresentCard = () => {
