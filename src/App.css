@@ -34,6 +34,7 @@ body,
   background: -o-linear-gradient(-45deg, #00dbde, #fc00ff);
   background: -moz-linear-gradient(-45deg, #00dbde, #fc00ff);
   background: linear-gradient(-45deg, #00dbde, #fc00ff);
+  border-right: 2px solid #f507fe;
 }
 
 .tt-progress::after {
@@ -42,7 +43,7 @@ body,
   border-top: 10px solid #f507fe;
   border-left: 10px solid #ffffff00;
   border-right: 10px solid #ffffff00;
-  right: -9px;
+  right: -11px;
   top: -10px;
 }
 

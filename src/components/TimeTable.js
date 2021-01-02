@@ -22,9 +22,9 @@ const TimeTable = ({ sem8, omitElective }) => {
       clearInterval(intervalID);
     };
   }, []);
-  const updateWidth = () => {
-    // let width = (9 - 9) * 60 + 30;
-    let width = (HOUR - 9) * 60 + MIN;
+  const updateWidth = (min,hr) => {
+    // let width = (9 - 9) * 60 + 199;
+    let width = (hr - 9) * 60 + min;
     if (width < 360) {
       setprogressWidth((width / 360) * 100);
     } else if (width >= 360) {
@@ -32,7 +32,7 @@ const TimeTable = ({ sem8, omitElective }) => {
     }
   };
   useEffect(() => {
-    updateWidth();
+    updateWidth(MIN,HOUR);
   }, [MIN]);
   useEffect(() => {
     setHOUR(DATE.getHours());
