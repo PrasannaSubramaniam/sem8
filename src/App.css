@@ -1,15 +1,79 @@
-body {
+body,
+.hrbox-tag a {
   padding: 0;
   margin: 0;
   font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
   color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+
+.tt-progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px 10px 10px;
+  width: calc(100% - 10px);
+  margin: 5px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.tt-progress-parent {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.tt-progress {
+  position: absolute;
+  height: 30px;
+  background-color: #7378edc2;
+}
+
+.hrbox {
+  border: 1px solid black;
+  height: 30px;
+  position: relative;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.hrbox span {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+}
+
+.btime,
+.stime {
+  font-size: 14px;
+  font-weight: 600;
+  /* transform: rotate(-90deg); */
+}
+
+.b75min {
+  width: calc(75 / 360 * 100%);
+}
+
+.b45min {
+  width: calc(45 / 360 * 100%);
+}
+
+.b30min {
+  width: calc(30 / 360 * 100%);
+}
+
+.b15min {
+  width: calc(15 / 360 * 100%);
+}
+
+.tt-progress-content {
+  display: flex;
 }
 
 .app-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   min-height: calc(100vh - 50px);
   padding-top: 66px;
   background: #a64bf4;
@@ -17,6 +81,13 @@ body {
   background: -o-linear-gradient(45deg, #00dbde, #fc00ff);
   background: -moz-linear-gradient(45deg, #00dbde, #fc00ff);
   background: linear-gradient(45deg, #00dbde, #fc00ff);
+}
+
+.tt-cards-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .col-heading {
@@ -43,6 +114,13 @@ body {
 .cell div {
   position: absolute;
   font-weight: bold;
+}
+
+.se-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 116px);
 }
 
 .se-container {
@@ -125,7 +203,9 @@ td a {
   font-size: 16px;
 }
 td a:active,
-td a:hover {
+td a:hover,
+.a-hover:hover,
+.a-hover:active {
   border: solid black;
   border-radius: 50px;
   padding: 2px 5px;
@@ -233,3 +313,21 @@ form {
   text-decoration: none;
   color: #4778d9;
 } */
+
+@media only screen and (max-width: 1000px) {
+  .break-hide {
+    display: none;
+  }
+  .btime {
+    font-size: 12px;
+  }
+  .stime {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .stime {
+    display: none;
+  }
+}

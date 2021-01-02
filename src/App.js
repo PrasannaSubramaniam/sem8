@@ -32,21 +32,43 @@ const App = () => {
         code: "14CSE16",
         lookupSlug: "hipagrhldb",
       },
-      PROJ: {
+      "P:KTS": {
+        fullName: "Project",
+        code: "14CSP81",
+        lookupSlug: "dalqcz7rqx",
+      },
+      "P:CS": {
+        fullName: "Project",
+        code: "14CSP81",
+        lookupSlug: "dalqcz7rqx",
+      },
+      "P:VES": {
+        fullName: "Project",
+        code: "14CSP81",
+        lookupSlug: "dalqcz7rqx",
+      },
+      "P:SR": {
+        fullName: "Project",
+        code: "14CSP81",
+        lookupSlug: "dalqcz7rqx",
+      },
+      "P:DD": {
         fullName: "Project",
         code: "14CSP81",
         lookupSlug: "dalqcz7rqx",
       },
     },
     timeTable: [
-      ["PEHV", "BEA", "SQA", "ED", "SPM"], //0
-      ["BEA", "SQA", "PEHV", "SPM", "ED"], //1
-      ["SQA", "ED", "PEHV", "BEA", "SPM"], //2
-      ["PEHV", "SPM", "SQA", "BEA", "ED"], //3
-      ["SPM", "ED", "SQA", "PEHV", "BEA"], //4
-      // ["PROJ(KTS)", "PROJ(CS)", "PROJ(VES)", "PROJ(SR)", "PROJ(DD)"], //5
+      [], //0
+      ["PEHV", "BEA", "SQA", "ED", "SPM"], //1
+      ["BEA", "SQA", "PEHV", "SPM", "ED"], //2
+      ["SQA", "ED", "PEHV", "BEA", "SPM"], //3
+      ["PEHV", "SPM", "SQA", "BEA", "ED"], //4
+      ["SPM", "ED", "SQA", "PEHV", "BEA"], //5
+      ["P:KTS", "P:CS", "P:VES", "P:SR", "P:DD"], //6
     ],
-    currentSatAlternative: 2, //Wednesday
+    // currentSatAlternative: 3, //Wednesday
+    // currentSunAlternative: 3, //Wednesday
   };
   const electiveList = [
     { name: "Building Enterprise Applications", code: "14ITE12" },
@@ -70,22 +92,40 @@ const App = () => {
   };
   return (
     <div>
-      <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">
-          <img src={logo} style={{ width: "40px" }} />
-          &nbsp;Crimepits
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <nav
+        class="navbar navbar-expand navbar-dark bg-dark fixed-top"
+        style={{ display: "flex", justifyContent: "space-between" }}
+      >
+        <div>
+          <a class="navbar-brand" href="#">
+            <img src={logo} style={{ width: "40px" }} />
+            &nbsp;Crimepits
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        {hasElectives ? (
+          <i
+            class="fa fa-sign-out"
+            aria-hidden="true"
+            style={{ color: "#ffffff", fontSize: "20px", cursor: "pointer" }}
+            onClick={() => {
+              localStorage.setItem("omitElective", "");
+              sethasElectives(false);
+            }}
+          ></i>
+        ) : (
+          ""
+        )}
       </nav>
       <div className="app-content">
         {hasElectives ? (

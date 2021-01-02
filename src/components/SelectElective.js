@@ -32,40 +32,42 @@ const SelectElective = ({ electiveList, handleSubmit }) => {
     setdisabled(disabledArray);
   }, [checked]);
   return (
-    <div className="se-container">
-      <div className="se-heading">Choose your electives</div>
-      <div className="se-checkboxes">
-        {electiveList.map((el, i) => (
-          <p>
-            <input
-              type="checkbox"
-              id={`check${i}`}
-              checked={checked[i]}
-              disabled={disabled[i]}
-              onClick={() => {
-                console.log(i + "clicked");
-                handleClick(i);
-              }}
-            />
-            <label
-              className="se-label"
-              for={`check${i}`}
-            >{`${el.name} (${el.code})`}</label>
-          </p>
-        ))}
-      </div>
-      {showSubmit ? (
-        <div
-          className="se-submit-btn"
-          onClick={() => {
-            handleSubmit(checked);
-          }}
-        >
-          <span>Submit</span>
+    <div className="se-wrapper">
+      <div className="se-container">
+        <div className="se-heading">Choose your electives</div>
+        <div className="se-checkboxes">
+          {electiveList.map((el, i) => (
+            <p>
+              <input
+                type="checkbox"
+                id={`check${i}`}
+                checked={checked[i]}
+                disabled={disabled[i]}
+                onClick={() => {
+                  console.log(i + "clicked");
+                  handleClick(i);
+                }}
+              />
+              <label
+                className="se-label"
+                for={`check${i}`}
+              >{`${el.name} (${el.code})`}</label>
+            </p>
+          ))}
         </div>
-      ) : (
-        <></>
-      )}
+        {showSubmit ? (
+          <div
+            className="se-submit-btn"
+            onClick={() => {
+              handleSubmit(checked);
+            }}
+          >
+            <span>Submit</span>
+          </div>
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 };
