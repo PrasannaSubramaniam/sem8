@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/sem8/static/css/main.0a3495d7.chunk.css",
-    "main.js": "/sem8/static/js/main.69d9edea.chunk.js",
-    "main.js.map": "/sem8/static/js/main.69d9edea.chunk.js.map",
+    "main.css": "/sem8/static/css/main.551fbee3.chunk.css",
+    "main.js": "/sem8/static/js/main.effd2ab7.chunk.js",
+    "main.js.map": "/sem8/static/js/main.effd2ab7.chunk.js.map",
     "runtime-main.js": "/sem8/static/js/runtime-main.962b2154.js",
     "runtime-main.js.map": "/sem8/static/js/runtime-main.962b2154.js.map",
     "static/js/2.ee9385a5.chunk.js": "/sem8/static/js/2.ee9385a5.chunk.js",
     "static/js/2.ee9385a5.chunk.js.map": "/sem8/static/js/2.ee9385a5.chunk.js.map",
     "index.html": "/sem8/index.html",
-    "static/css/main.0a3495d7.chunk.css.map": "/sem8/static/css/main.0a3495d7.chunk.css.map",
+    "static/css/main.551fbee3.chunk.css.map": "/sem8/static/css/main.551fbee3.chunk.css.map",
     "static/js/2.ee9385a5.chunk.js.LICENSE.txt": "/sem8/static/js/2.ee9385a5.chunk.js.LICENSE.txt",
     "static/media/icon-192x192.a1b65298.png": "/sem8/static/media/icon-192x192.a1b65298.png"
   },
   "entrypoints": [
     "static/js/runtime-main.962b2154.js",
     "static/js/2.ee9385a5.chunk.js",
-    "static/css/main.0a3495d7.chunk.css",
-    "static/js/main.69d9edea.chunk.js"
+    "static/css/main.551fbee3.chunk.css",
+    "static/js/main.effd2ab7.chunk.js"
   ]
 }
